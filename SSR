@@ -4,10 +4,6 @@ export PATH
 #=================================================================#
 #   System Required:  CentOS 6,7, Debian, Ubuntu                   #
 #   Description: One click Install ShadowsocksR Server              #
-#   Author: 91yun                                                              #
-#   Thanks: @breakwa11 <https://twitter.com/breakwa11>       #
-#   Thanks: @Teddysun <i@teddysun.com>                            #
-#   Intro:  https://shadowsocks.be/9.html                              #
 #=================================================================#
 rm -f SSR
 clear
@@ -20,8 +16,6 @@ echo -e "\033[34m===============================================================
 \033[35m                中途warning不必理会,顺带提供多端口脚本教程                   \033[0m
 
 \033[36m                脚本下载文件卡住请输入Crtl+c结束脚本,重新再来一次！                   \033[0m
-
-\033[31m                版权来源西门吹雪                                \033[0m
 
 \033[34m                            即将开始搭建...                   \033[0m
 \033[34m================================================================\033[0m";
