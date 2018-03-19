@@ -4,5 +4,5 @@ mv CentOS-Base.repo CentOS-Base.repo.bak
 mv CentOS6-Base-163.repo CentOS-Base.repo
 yum makecache
 clear
-echo "163yum-install success"
+echo "success"
 rm -rf yum163
