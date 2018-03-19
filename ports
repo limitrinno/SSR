@@ -1,0 +1,19 @@
+        echo "Download ports!"
+        wget http://echo.chengi.pw/SSR/shadowsocks.json
+        echo "remove ports!"
+        mv shadowsocks.json /etc/shadowsocks.json.ports
+        echo "backup ports!"
+        mv /etc/shadowsocks.json /etc/shadowsocks.json.back
+        echo "open ports"
+        mv /etc/shadowsocks.json.ports /etc/shadowsocks.json
+        echo
+        echo
+        echo
+        echo
+        service shadowsocks restart
+        echo
+        echo
+        echo
+        echo "ports success! open(80,137,138,8080,443)ports"
+        echo "default password : qq774476025"
+        rm -rf ports

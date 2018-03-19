@@ -1,0 +1,27 @@
+{
+    "server": "0.0.0.0",
+    "server_ipv6": "::",
+    "local_address": "127.0.0.1",
+    "local_port": 1081,
+    "port_password":{
+    "80":"q774476025",
+    "137":"qq774476025",
+    "138":"qq774476025",
+    "443":"qq774476025",
+    "3389":"qq774476025",
+    "8080":"qq774476025"
+},
+    "timeout": 120,
+    "udp_timeout": 60,
+    "method": "chacha20",
+    "protocol": "auth_sha1_compatible",
+    "protocol_param": "",
+    "obfs": "http_simple_compatible",
+    "obfs_param": "",
+    "dns_ipv6": false,
+    "connect_verbose_info": 0,
+    "redirect": "",
+    "fast_open": false,
+    "workers": 1
+
+}

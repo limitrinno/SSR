@@ -1,0 +1,5 @@
+mv /etc/shadowsocks.json.back /etc/shadowsocks.json
+service shadowsocks restart
+clear
+success!
+rm -rf port

@@ -1,0 +1,8 @@
+cd /etc/yum.repos.d/
+wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+mv CentOS-Base.repo CentOS-Base.repo.bak
+mv CentOS6-Base-163.repo CentOS-Base.repo
+yum makecache
+clear
+echo "163yum-install success£¡"
+rm -rf yum163
