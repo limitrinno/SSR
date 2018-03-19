@@ -282,8 +282,10 @@ function install_ss(){
         echo 
         echo "卸载程序请输入:wget https://raw.githubusercontent.com/limitrinno/SSR/master/SSR && bash SSR uninstall"
         echo 
-        echo "多端口一键脚本:wget https://raw.githubusercontent.com/limitrinno/SSR/master/SSR && bash ports"
+        echo "多端口一键脚本:wget https://raw.githubusercontent.com/limitrinno/SSR/master/ports && bash ports"
         echo
+	echo "单端口还原脚本:wget https://raw.githubusercontent.com/limitrinno/SSR/master/port && bash port"
+	echo
         echo "Enjoy it!"
         echo
     else
