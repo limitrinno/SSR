@@ -13,7 +13,7 @@ rm -f SSR
 clear
 echo -e "\033[34m================================================================\033[0m
 
-\033[32m                欢迎使用本博客的SSR/翻墙一键脚本                         \033[0m
+\033[32m                欢迎使用SSR/翻墙一键脚本                         \033[0m
 
 \033[33m                系统支持：centos6.x 7.x,Debian,Ubuntu                 \033[0m
 
@@ -97,8 +97,8 @@ function pre_install(){
     fi
     # Set ShadowsocksR config password
     echo "请输入SSR连接密码:"
-    read -p "(默认密码: qq774476025):" shadowsockspwd
-    [ -z "$shadowsockspwd" ] && shadowsockspwd="qq774476025"
+    read -p "(默认密码: limitrinno):" shadowsockspwd
+    [ -z "$shadowsockspwd" ] && shadowsockspwd="limitrinno"
     echo
     echo "---------------------------"
     echo "password = $shadowsockspwd"
@@ -108,7 +108,7 @@ function pre_install(){
     while true
     do
     echo -e "请输入你要设置的SSR单端口号(安装成功会有多端口脚本)，默认设置8080::"
-    read -p "(默认自动设置SS免流端口为8080):" shadowsocksport
+    read -p "(默认自动设置SS端口为8080):" shadowsocksport
     [ -z "$shadowsocksport" ] && shadowsocksport="8080"
     expr $shadowsocksport + 0 &>/dev/null
     if [ $? -eq 0 ]; then
@@ -152,23 +152,23 @@ function pre_install(){
 # Download files
 function download_files(){
     # Download libsodium file
-    if ! wget --no-check-certificate -O libsodium-1.0.10.tar.gz http://echo.chengi.pw/SSR/libsodium-1.0.10.tar.gz; then
+    if ! wget --no-check-certificate -O libsodium-1.0.10.tar.gz https://github.com/limitrinno/SSR/blob/master/libsodium-1.0.10.tar.gz; then
         echo "Failed to download libsodium file!"
         exit 1
     fi
     # Download ShadowsocksR file
-    # if ! wget --no-check-certificate -O manyuser.zip http://echo.chengi.pw/SSR/manyuser.zip; then
+    # if ! wget --no-check-certificate -O manyuser.zip https://github.com/limitrinno/SSR/blob/master/shadowsocks-manyuser.zip; then
         # echo "Failed to download ShadowsocksR file!"
         # exit 1
     # fi
     # Download ShadowsocksR chkconfig file
     if [ "$OS" == 'CentOS' ]; then
-        if ! wget --no-check-certificate http://echo.chengi.pw/SSR/shadowsocksR -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://github.com/limitrinno/SSR/blob/master/shadowsocksR -O /etc/init.d/shadowsocks; then
             echo "Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
     else
-        if ! wget --no-check-certificate http://echo.chengi.pw/SSR/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://github.com/limitrinno/SSR/blob/master/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
             echo "Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
@@ -251,7 +251,7 @@ function install_ss(){
     ldconfig
     # Install ShadowsocksR
     cd $cur_dir
-    wget http://echo.chengi.pw/SSR/shadowsocks-manyuser.zip
+    wget https://github.com/limitrinno/SSR/blob/master/shadowsocks-manyuser.zip
      unzip -q shadowsocks-manyuser.zip
      mv shadowsocks-manyuser /usr/local/shadowsocks/
     #git clone -b manyuser https://github.com/breakwa11/shadowsocks.git /usr/local/shadowsocks
@@ -280,11 +280,11 @@ function install_ss(){
         echo
         echo "安装顺利完成，如果觉得不错推荐给你的小伙伴."
         echo 
-        echo "卸载程序请输入:wget http://echo.chengi.pw/SSR/SSR && bash SSR uninstall"
+        echo "卸载程序请输入:wget https://github.com/limitrinno/SSR/blob/master/SSR && bash SSR uninstall"
         echo 
-        echo "多端口一键脚本:wget http://echo.chengi.pw/SSR/ports && bash ports"
+        echo "多端口一键脚本:wget https://github.com/limitrinno/SSR/blob/master/SSR && bash ports"
         echo
-        echo "再见！多来博客逛逛，有SSR改多端口改密码 更换YUM的教程!"
+        echo "Enjoy it!"
         echo
     else
         echo "Shadowsocks安装失败!"
