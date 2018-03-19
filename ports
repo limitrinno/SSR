@@ -1,5 +1,5 @@
         echo "Download ports!"
-        wget http://echo.chengi.pw/SSR/shadowsocks.json
+        wget https://github.com/limitrinno/SSR/blob/master/shadowsocks.json
         echo "remove ports!"
         mv shadowsocks.json /etc/shadowsocks.json.ports
         echo "backup ports!"
@@ -15,5 +15,5 @@
         echo
         echo
         echo "ports success! open(80,137,138,8080,443)ports"
-        echo "default password : qq774476025"
+        echo "default password : limitrinno"
         rm -rf ports
