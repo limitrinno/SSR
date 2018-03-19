@@ -278,7 +278,7 @@ function install_ss(){
         echo -e "协议: \033[41;37m http_simple \033[0m"
         echo -e "加密方式: \033[41;37m chacha20 \033[0m"
         echo
-        echo "安装顺利完成，如果觉得不错推荐给你的小伙伴."
+        echo "安装顺利完成，如果觉得不错推荐给你的小伙伴"
         echo 
         echo "卸载程序请输入:wget https://raw.githubusercontent.com/limitrinno/SSR/master/SSR && bash SSR uninstall"
         echo 
